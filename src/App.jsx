@@ -1,14 +1,12 @@
 import { useState } from "react";
+import Header from "./Components/Header/Header";
 import "./App.css";
 
 function App() {
 
   return (
     <>
-      <div className="container">
-        <img className='anakuma' src="/Images/anakuma-logo-whole.jpg" />
-        <h1>Website coming soon.</h1>
-      </div>
+    <Header/>
     </>
   );
 }
