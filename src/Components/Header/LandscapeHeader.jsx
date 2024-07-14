@@ -81,7 +81,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 fgColor={"white"}
-                bgColor={"#28412d"}
+                bgColor={"#384129"}
                 style={{ height: "5.25vh", width: "5.25vh" }}
               />
             </div>
@@ -103,7 +103,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 fgColor={"white"}
-                bgColor={"#28412d"}
+                bgColor={"#384129"}
                 style={{ height: "5.25vh", width: "5.25vh" }}
               />
             </div>

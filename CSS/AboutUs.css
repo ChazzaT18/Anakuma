@@ -1,0 +1,397 @@
+@font-face {
+  font-family: "Sdasian-WyDon";
+  src: url("../src/fonts/Sdasian-WyDon.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ChineseRocks";
+  src: url("../src/fonts/chinese\ rocks\ rg.otf") format("opentype");
+}
+@media (orientation: landscape) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12vh;
+    align-items: center;
+    z-index: 1;
+  }
+  .about-us-header {
+    width: 100%;
+    height: 100%;
+    font-size: 12vh;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: "GamiliaVintageDemoStamp-q2Zdx";
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us-header-container {
+    display: flex;
+    /* position: fixed; */
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    padding-bottom: -7vh;
+    margin-top: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 3, 32);
+    background-position-y: 15%;
+    z-index: -1;
+    opacity: 1.4;
+  }
+  .about-us-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background: url("/Images/taco-black-and-white.jpg") center;
+    margin-top: 10vh;
+  }
+  .about-us-container-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .about-us-container-1.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .about-us-text-container-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us-text-1 {
+    width: 70%;
+    padding: 7%;
+    background-color: rgba(0, 0, 0, 0.815);
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-family: "ChineseRocks";
+    color: rgb(255, 255, 255);
+    font-size: 3.25vh;
+    justify-content: center;
+    letter-spacing: 0.1vw;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+  .photo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+  }
+
+  .photo-container-1 {
+    width: 70%;
+    height: 83%;
+    position: relative;
+  }
+
+  .ali-and-mo-1 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .halisco-with-guitar {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .about-us-container-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .about-us-container-2.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .about-us-text-container-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo-container-2 {
+    width: 70%;
+    height: 83%;
+    position: relative;
+  }
+  .about-us-text-2 {
+    width: 70%;
+    padding: 7%;
+    background-color: rgba(0, 0, 0, 0.815);
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-family: "ChineseRocks";
+    color: rgb(255, 255, 255);
+    font-size: 3.25vh;
+    justify-content: center;
+    letter-spacing: 0.1vw;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+  .crab-bowl {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .anakuma-resturant {
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .bao-buns,
+  .trout {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* Make sure this image is on top */
+  }
+
+  .anakuma-opening,
+  .chicken-wings {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* This image will be below the other one */
+  }
+  .about-us-container-3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .about-us-container-3.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (orientation:portrait) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8vh;
+    align-items: center;
+  }
+  .about-us-header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-top: 8vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 3, 32);
+    background-position-y: 15%;
+    z-index: -1;
+  }
+  .about-us-header {
+    width: 100%;
+    height: 100%;
+    font-size: 10vw;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: "GamiliaVintageDemoStamp-q2Zdx";
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: url("/Images/taco-black-and-white.jpg") center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+  }
+  .about-us-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .about-us-text-container.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .about-us-text {
+    width: 75%;
+    padding: 7%;
+    background-color: rgba(0, 0, 0, 0.815);
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-family: "ChineseRocks";
+    letter-spacing: 0.1vw;
+    color: rgb(255, 255, 255);
+    font-size: 2.5vh;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+  .photo-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 65vh;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .photo-wrapper.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .photo-container {
+    width: 95%;
+    height: 85%;
+    position: relative;
+  }
+
+  .ali-and-mo-1 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .halisco-with-guitar {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .crab-bowl {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .anakuma-resturant {
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .chicken-wings{
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .bao-buns,
+  .trout {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* Make sure this image is on top */
+  }
+
+  .anakuma-opening {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* This image will be below the other one */
+  }
+}

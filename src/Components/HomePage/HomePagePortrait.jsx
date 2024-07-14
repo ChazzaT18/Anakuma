@@ -1,9 +1,7 @@
-import AboutUs from "./AboutUs";
-import FindUsLandscape from "./FindUsLandscape"
-import ContactUs from "./ContactUs";
-import "../../../CSS/FindUs.css"
+import AboutUsPortrait from "./AboutUsPortrait";
+import "../../../CSS/AboutUs.css"
 
-const HomePageLandscape = () => {
+const HomePagePortrait = () => {
   return (
     <>
     <div className="home-page-container">
@@ -29,13 +27,11 @@ const HomePageLandscape = () => {
               />
             </div>
         </div>
+        <AboutUsPortrait />
       </section>
     </div>
-        <AboutUs />
-        <ContactUs/>
-        <FindUsLandscape/>
     </>
   );
 };
 
-export default HomePageLandscape;
+export default HomePagePortrait;

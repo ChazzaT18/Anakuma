@@ -44,10 +44,10 @@
         align-items: center;
       }
       .anakuma-welcome{
-        border-top: 0.35vh solid black;
-        border-bottom: 0.35vh solid black;
+        border-bottom: 1vh solid black;
+        border-top: 1vh solid black;
         width: 100%;
-        height: 20vh;
+        height: 17.5vh;
         background-image: url("/Images/proto.png");
         background-position: center;
         background-size: cover;
@@ -58,16 +58,16 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
       }
       .anakuma-title{
-        font-size: 8vh;
+        height: 45%;
         display: flex;
         align-items: center;
         justify-content: center;
-        letter-spacing: 0.2vw;
+        /* letter-spacing: 0.2vw;
         color: #000000;
         font-family: "Hachimaki-EawZ8";
-        /* text-shadow: -0.1px -0.1px 0 #000, 0.1px -0.5px 0 #000, -0.1px 0.1px 0 #000,
-        0.1px 0.1px 0 #000; */
-        font-style: italic;
+        text-shadow: -0.1px -0.1px 0 #000, 0.1px -0.5px 0 #000, -0.1px 0.1px 0 #000,
+        0.1px 0.1px 0 #000;
+        font-style: italic; */
       }
       .badger-container{
         height: 100%;
@@ -79,6 +79,9 @@
       .badger-logo{
         height: 60%;
       }
+      .tester{
+        height: 200vh;
+      }
 }
 @media (orientation: portrait) {
     .home-page-container {
@@ -86,6 +89,7 @@
         flex-direction: column;
         width: 100%;
         height: auto;
+        padding-bottom: 10vh;
       }
       
       .image-gallery-container {
@@ -108,5 +112,42 @@
         height: 100%;
         transition: transform 5s ease; /* Example transition effect */
         object-fit: cover; /* Ensure the image covers the container */
+      }
+      .welcome-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+      }
+      .anakuma-welcome{
+        width: 100%;
+        height: 11.5vh;
+        background-image: url("/Images/prototype-portrait.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+      }
+      .anakuma-title{
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .badger-container{
+        height: 100%;
+        width: 22.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .badger-logo{
+        height: 35%;
       }
 }

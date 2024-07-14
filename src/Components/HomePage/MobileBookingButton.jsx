@@ -26,7 +26,7 @@ const MobileBookingButton = ({ MobileMenuVisible, setMobileMenuVisible }) => {
       href="https://booking.favouritetable.com/?SiteCode=1931"
       className={`mobile-booking-button ${MobileMenuVisible ? "mobile-booking-button-visible" : ""}`}
     >
-      BOOK NOW
+      BOOK A TABLE
     </a>
   ) : null;
 };
