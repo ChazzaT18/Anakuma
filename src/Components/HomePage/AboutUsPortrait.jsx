@@ -6,7 +6,6 @@ const AboutUsPortrait = () => {
   useEffect(() => {
     const backgroundContainer = document.createElement("div");
     backgroundContainer.classList.add("about-us-background");
-    backgroundContainer.style.backgroundImage = `url(/Images/banners.png)`;
     backgroundContainer.style.height = "100vh";
     backgroundContainer.style.width = "100vw";
     backgroundContainer.style.marginTop = "8vh";
@@ -47,9 +46,6 @@ const AboutUsPortrait = () => {
 
   return (
     <>
-      <div className="about-us-header-container">
-        <h1 className="about-us-header">ABOUT US</h1>
-      </div>
       <div className="about-us-section">
         <div
           className="about-us-text-container"

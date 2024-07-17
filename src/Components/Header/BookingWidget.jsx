@@ -18,7 +18,15 @@ const BookingWidget = () => {
 
   const showBookingWidget = () => {
       window.ft_showbookingwidget("ft_bookingwidget1931");
-  };  
+  }; 
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      document.getElementById("booking-widget-portal").style.display = "flex";
+      showBookingWidget();
+    }
+  };
 
   const portalContent = <div id="ft_bookingwidget1931" sitecode="1931"></div>;
 
@@ -32,7 +40,13 @@ const BookingWidget = () => {
         showBookingWidget();
       }}
     >
-      <h3 className="booking-button">BOOK NOW</h3>
+      <h3
+        tabIndex={0}
+        className="booking-button"
+        onKeyDown={handleKeyDown}
+      >
+        BOOK NOW
+      </h3>
       {ReactDOM.createPortal(
         portalContent,
         document.getElementById("booking-widget-portal")

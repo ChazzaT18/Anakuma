@@ -92,7 +92,7 @@
     display: flex;
     justify-content: center;
     width: 50%;
-    height: 100%;
+    height: 100vh;
     align-items: center;
     position: relative;
   }
@@ -109,7 +109,7 @@
     position: absolute;
     bottom: 10px; /* Use pixels to maintain consistent positioning */
     left: 10px; /* Use pixels to maintain consistent positioning */
-    width: calc(55% - 20px); /* Adjust width based on padding */
+    height: 50vh;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 2; /* Make sure this image is on top */
   }
@@ -119,7 +119,7 @@
     top: 10px; /* Use pixels to maintain consistent positioning */
     right: 10px; /* Use pixels to maintain consistent positioning */
     padding: 2%;
-    width: calc(55% - 20px); /* Adjust width based on padding */
+    height: 50vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 1; /* This image will be below the other one */
@@ -223,7 +223,7 @@
     transform: translateY(0);
   }
 }
-@media (orientation:portrait) {
+@media (orientation:portrait) and (min-width: 800px) {
   .about-us-container {
     display: flex;
     flex-direction: column;
@@ -231,19 +231,163 @@
     margin-top: 8vh;
     align-items: center;
   }
-  .about-us-header-container {
+  .about-us-header {
+    width: 100%;
+    height: 100%;
+    font-size: 10vw;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-family: "GamiliaVintageDemoStamp-q2Zdx";
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-us-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background: url("/Images/taco-black-and-white.jpg") center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+  }
+  .about-us-text-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    margin-top: 8vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .about-us-text-container.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .about-us-text {
+    width: 75%;
+    padding: 7%;
+    background-color: rgba(0, 0, 0, 0.815);
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-family: "ChineseRocks";
+    letter-spacing: 0.1vw;
+    color: rgb(255, 255, 255);
+    font-size: 2.5vh;
+    justify-content: center;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+  .photo-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(19, 3, 32);
-    background-position-y: 15%;
-    z-index: -1;
+    height: 90vh;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  }
+  .photo-wrapper.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .photo-container {
+    width: 95%;
+    height: 80vh;
+    position: relative;
+  }
+
+  .ali-and-mo-1 {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 50px; /* Use pixels to maintain consistent positioning */
+    left: 15px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .halisco-with-guitar {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .crab-bowl {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* Make sure this image is on top */
+  }
+
+  .anakuma-resturant {
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .chicken-wings{
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* This image will be below the other one */
+  }
+  .bao-buns,
+  .trout {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    padding: 2%;
+    position: absolute;
+    bottom: 10px; /* Use pixels to maintain consistent positioning */
+    left: 10px; /* Use pixels to maintain consistent positioning */
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1; /* Make sure this image is on top */
+  }
+
+  .anakuma-opening {
+    position: absolute;
+    top: 10px; /* Use pixels to maintain consistent positioning */
+    right: 10px; /* Use pixels to maintain consistent positioning */
+    padding: 2%;
+    width: calc(55% - 20px); /* Adjust width based on padding */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2; /* This image will be below the other one */
+  }
+}
+@media (orientation:portrait) and (max-width: 800px) {
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8vh;
+    align-items: center;
   }
   .about-us-header {
     width: 100%;
@@ -395,3 +539,4 @@
     z-index: 2; /* This image will be below the other one */
   }
 }
+

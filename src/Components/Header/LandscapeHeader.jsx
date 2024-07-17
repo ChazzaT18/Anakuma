@@ -23,7 +23,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, []);
 
   const toggleInfoMenu = () => {
     setInfoMenuVisible(!infoMenuVisible);
@@ -42,11 +42,17 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
     };
   }, [infoMenuVisible]);
 
+  const handleKeyDown = (e, action) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      action();
+    }
+  };
 
   return (
     <>
       <header>
-        {window.innerWidth > 1000 ? (
+        {window.innerWidth > 1200 ? (
           <div className="header-container">
             <div className="home-container">
               <Link
@@ -109,7 +115,12 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
             </div>
             <BookingWidget />
             <div className="info-container">
-              <div className="hamburger-menu" onClick={toggleInfoMenu}>
+              <div
+                className="hamburger-menu"
+                tabIndex={0}
+                onClick={toggleInfoMenu}
+                onKeyDown={(e) => handleKeyDown(e, toggleInfoMenu)}
+              >
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
@@ -136,7 +147,12 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
             </Link>
             <BookingWidget />
             <div className="info-container">
-              <div className="hamburger-menu" onClick={toggleInfoMenu}>
+              <div
+                className="hamburger-menu"
+                tabIndex={0}
+                onClick={toggleInfoMenu}
+                onKeyDown={(e) => handleKeyDown(e, toggleInfoMenu)}
+              >
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
@@ -145,7 +161,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
           </div>
         )}
       </header>
-      {window.innerWidth < 1000 ? (
+      {window.innerWidth < 1200 ? (
         <InfoMenuExtended
           infoMenuVisible={infoMenuVisible}
           setCurrentPage={setCurrentPage}

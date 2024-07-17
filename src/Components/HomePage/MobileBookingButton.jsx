@@ -17,7 +17,7 @@ const MobileBookingButton = ({ MobileMenuVisible, setMobileMenuVisible }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, [isPortrait, windowWidth]); 
 
   return isPortrait ? (
     <a

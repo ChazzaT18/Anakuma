@@ -24,6 +24,7 @@ const Header = ({ setCurrentPage, currentPage, MobileMenuVisible, setMobileMenuV
 
   return isPortrait ? (
     <PortraitHeader MobileMenuVisible={MobileMenuVisible} setMobileMenuVisible={setMobileMenuVisible} />
+    
   ) : (
     <LandscapeHeader
       setCurrentPage={setCurrentPage}

@@ -11,7 +11,7 @@
   src: url("../src/fonts/Sdasian-WyDon.ttf") format("truetype");
 }
 
-@media (orientation: landscape) and (min-width: 1000px) {
+@media (orientation: landscape) and (min-width: 1200px) {
   header {
     width: 100%;
     height: 12vh;
@@ -239,7 +239,7 @@
     transform: translateY(-5%) scaleY(1);
   }
 }
-@media (max-width: 1000px) and (orientation: landscape) {
+@media (max-width: 1200px) and (orientation: landscape) {
   header {
     width: 100%;
     height: 12vh;

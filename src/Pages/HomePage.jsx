@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ImgSlideshow from "../Components/HomePage/ImgSlideshow";
 import HomePageLandscape from "../Components/HomePage/HomePageLandscape";
+import Footer from "../Components/Footer/Footer";
 import HomePagePortrait from "../Components/HomePage/HomePagePortrait";
 import "../../CSS/HomePage.css";
 
@@ -52,6 +53,7 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
     <>
       <ImgSlideshow />
       {isPortrait? <HomePagePortrait/> : <HomePageLandscape />}
+      <Footer />
     </>
   );
 };
