@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import {useContext} from "react";
+import CurrentPageContext from "../../Context/CurrentPageContext";
 
 const FindUsPortrait = () => {
+
+ const { currentPage } = useContext(CurrentPageContext);
+
   return (
-    <div className="info-container-find-us">
+    <div className="info-container-find-us" style={{borderTop: currentPage === "find-us"? "0.75vh solid #b8a585" : "none"}}>
       <h1 className="find-us-title">FIND US</h1>
       <div className="coloured-square">
         <div className="map-container">

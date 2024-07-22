@@ -261,7 +261,7 @@
     height: 20%;
     color: white;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(0, 0, 0);
   }
   .footer-address-mobile {
     font-family: "Courier New", Courier, monospace;
@@ -278,7 +278,7 @@
   .footer-contact-mobile {
     font-family: "Courier New", Courier, monospace;
     font-style: 700;
-    color: rwhite;
+    color: white;
     height: 50%;
     width: 100%;
     font-size: 3.5vw;

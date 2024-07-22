@@ -127,6 +127,25 @@ const MenuPortrait = ({
     scrollToSection(section);
   };
 
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const handleResize = () => {
+    setWindowHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    // Initial adjustment
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   if (!imagesLoaded) {
     return <LoadingScreen />;
   }
@@ -145,7 +164,7 @@ const MenuPortrait = ({
             <div className="bar-category"></div>
           </div>
         </div>
-        <div className="menu-nav-categories">
+        <div className="menu-nav-categories" style={{ height: `${windowHeight}px` }}>
           <h2 className="menu-categories" onClick={() => handleClick("snacks-container")}>SNACKS</h2>
           <h2 className="menu-categories" onClick={() => handleClick("small-plates-container")}>SMALL PLATES</h2>
           <h2 className="menu-categories" onClick={() => handleClick("bao-container")}>BAO BUNS</h2>

@@ -15,7 +15,7 @@ const FooterPortrait = () => {
         <div className="footer-contact-mobile">
           <SocialIcon
             className="facebook-icon"
-            url="https://www.facebook.com/HaliscoRestaurant/"
+            url="https://www.instagram.com/anakumabrighton/"
             target="_blank"
             rel="noopener noreferrer"
             fgColor={"white"}
@@ -33,7 +33,7 @@ const FooterPortrait = () => {
           </a>
           <SocialIcon
             className="instagram-icon"
-            url="https://www.instagram.com/haliscobrighton/"
+            url="https://www.facebook.com/profile.php?id=61552572519429"
             target="_blank"
             rel="noopener noreferrer"
             fgColor={"white"}
