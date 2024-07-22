@@ -1,0 +1,429 @@
+@font-face {
+  font-family: "ChineseRocks";
+  src: url("../src/fonts/chinese\ rocks\ rg.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gamilia";
+  src: url("../src/fonts/GamiliaVintageDemoStamp-q2Zdx.otf") format("opentype");
+}
+@media (orientation: landscape) {
+  .menu-page-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+  }
+  .menu-img-container {
+    height: 33.33vw;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #28412d;
+    padding-top: 9vh;
+    border-top: 0.5vh solid #b8a585;
+  }
+  .horizontal-div-1,
+  .horizontal-div-2,
+  .horizontal-div-3,
+  .horizontal-div-4,
+  .horizontal-div-5,
+  .horizontal-div-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: calc(100% / 6);
+  }
+  .square-div {
+    display: flex;
+    width: 100%;
+    height: 50%;
+  }
+  .full-div {
+    height: 100%;
+    width: 100%;
+  }
+  .square-img,
+  .full-img {
+    height: 100%;
+    width: 100%;
+  }
+  .menu-page-title-container {
+    height: 33.35vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.5vh solid #b8a585;
+    top: 21.5vh;
+    z-index: 30;
+    width: 100%;
+  }
+  .menu-page-title {
+    font-size: 9vw;
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33vw;
+    text-shadow: -0.33vw -0.33vw 0 #000, 0.33vw -0.33vw 0 #000,
+      -0.33vw 0.33vw 0 #000, 0.33vw 0.33vw 0 #000;
+    color: white;
+    font-family: "Gamilia";
+  }
+  .menu-cards-container {
+    margin-top: 3vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8vh;
+  }
+  .menu-item-container {
+    width: 100%;
+    margin-top: 10vh;
+    font-size: 5vw;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .category {
+    height: auto;
+    font-size: 10vh;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.2vw;
+    font-family: "ChineseRocks";
+    font-weight: normal;
+    margin-bottom: 8vh;
+  }
+  .dish-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 3vh;
+  }
+  .dish-name-price {
+    font-weight: bold;
+  }
+  .dietary-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1vw;
+  }
+  .tooltip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    position: relative;
+    margin-left: 0.5vw;
+    flex-direction: row;
+    margin-bottom: 0.5vh;
+  }
+  .vegan-symbol {
+    width: 3vh;
+    height: auto;
+    margin: 0.1vw;
+  }
+  .gluten-free-symbol {
+    width: 3vh                  ;
+    height: auto;
+    margin: 0.1vw;
+  }
+  .vegetarian-symbol {
+    width: 3vh;
+    height: auto;
+    margin: 0.1vw;
+  }
+  .vegan-option-symbol {
+    width: 3.25vh;
+    height: auto;
+    margin: 0.1vw;
+  }
+  .tooltip {
+    visibility: hidden;
+    width: max-content;
+    background-color: #384129;
+    font-family: "Courier New", Courier, monospace;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1vw;
+    font-weight: bolder;
+    font-size: 1vw;
+    position: absolute;
+    z-index: 1;
+    top: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  ul {
+    width: 90%;
+  }
+  .dish-description {
+    font-style: italic;
+    font-weight: normal;
+  }
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+  }
+  .menu-nav {
+    background-color: #28412d;
+    height: 10vh;
+    width: 100%;
+    text-shadow: -0.25vh -0.25vh 0 #000, 0.25vh -0.25vh 0 #000, 0.25vh 0.25vh 0 #000,
+    0.25vh 0.25vh 0 #000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 0.5vh solid #b8a585;
+    border-top: 0.5vh solid #b8a585;
+    font-family: "ChineseRocks";
+    font-size: 2.75vh;
+    align-items: center;
+  }
+  .nav-category {
+    transition: color 0.3s linear, text-decoration 0.3s linear, font-size 0.3s linear;
+    cursor: pointer;
+  }
+  .menu-nav-category-container{
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .active {
+    color: #cabf96;
+    font-size: 3.5vh;
+    text-shadow: -0.25vh -0.25vh 0 #000, 0.25vh -0.25vh 0 #000, 0.25vh 0.25vh 0 #000,
+    0.25vh 0.25vh 0 #000;
+    transition: all 0.3s linear, transform 0.3s linear;
+  }
+  .nav-replacement {
+    height: 11vh;
+    width: 100%;
+  }
+  .sticky {
+    position: fixed;
+    top: 12vh;
+    width: 100%;
+    z-index: 50;
+  }
+}
+@media (orientation: portrait) {
+  .menu-container {
+    width: 100%;
+  }
+  .menu-img {
+    width: 100%;
+    height: auto;
+    margin-top: 8vh;
+    margin-bottom: -0.5vh;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.626);
+  }
+  .category {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: auto;
+    font-size: 4vh;
+    color: rgb(0, 0, 0);
+    font-family: "ChineseRocks";
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  .dish-card,
+  .drink-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    font-size: 2vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .dietary-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1vw;
+  }
+  .vegan-symbol,
+  .gluten-free-symbol,
+  .vegetarian-symbol,
+  .vegan-option-symbol {
+    width: 2.5vh;
+    height: 2.5vh;
+    margin: 0.5vw;
+  }
+  .small-plates-container,
+  .tacos-container,
+  .tequila-container,
+  .tequila-cocktails-container,
+  .mezcal-container,
+  .mezcal-cocktails-container,
+  .soft-drinks-container,
+  .beers-container,
+  .snacks-container {
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .snacks-container {
+    margin-top: 5vh;
+  }
+  .dish-name {
+    font-weight: 600;
+    font-size: 2vh;
+    font-weight: bold;
+  }
+  .dish-description {
+    font-style: italic;
+  }
+  .name-dietary-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .drink-price {
+    font-weight: lighter;
+  }
+  .drink-name {
+    font-weight: bold;
+  }
+  .dietary-info {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 3vw;
+    color: rgb(88, 31, 31);
+  }
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "ChineseRocks";
+    font-size: 2.5vh;
+    align-items: center;
+    height: 14vh;
+    background-color: #28412d;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.626);
+  }
+  .dietary-signs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .dietary-ting {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 55%;
+  }
+  .hamburger-menu-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5vw;
+    height: 50%;
+  }
+  .bar-category {
+    width: 4vh;
+    height: 10%;
+    background-color: white;
+  }
+  .sticky {
+    position: fixed;
+    top: 8vh;
+    width: 100%;
+    z-index: 50;
+  }
+  .category-menu-open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "ChineseRocks";
+    top: 8vh;
+    width: 100vw;
+    z-index: 98;
+    font-size: 2.5vh;
+    height: 82vh;
+    background-color: #070707;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+  }
+  .category-menu-open.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .category-menu-nav {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 8.6vh;
+    background-color: #28412d;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.626);
+  }
+  .menu-nav-categories {
+    display: flex;
+    justify-content: center;
+    height: 90.7%;
+    flex-direction: column;
+    margin-bottom: 9vh;
+    overflow-y: hidden;
+    align-items: center;
+  }
+  .menu-categories {
+    cursor: pointer;
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    font-family: "ChineseRocks";
+    text-shadow: -0.2vh -0.2vh 0 #000, 0.2vh -0.2vh 0 #000, -0.2vh 0.2vh 0 #000,
+      0.2vh 0.2vh 0 #000;
+  }
+}

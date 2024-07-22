@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import ImgSlideshow from "../Components/HomePage/ImgSlideshow";
 import HomePageLandscape from "../Components/HomePage/HomePageLandscape";
 import Footer from "../Components/Footer/Footer";
+import LoadingScreen from "../Components/LoadingScreen";
 import HomePagePortrait from "../Components/HomePage/HomePagePortrait";
 import "../../CSS/HomePage.css";
 
 const HomePage = ({ setCurrentPage, currentPage }) => {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showLoading, setShowLoading] = useState(true);
   const [isPortrait, setIsPortrait] = useState(
     window.innerWidth < window.innerHeight
   );
@@ -26,7 +28,12 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
   }, []); 
 
   useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      setShowLoading(false);
+    }, 1250);
     setCurrentPage("home");
+    window.scrollTo(0, 0);
 
     const backgroundContainer = document.createElement("div");
     backgroundContainer.classList.add("about-us-background");
@@ -51,8 +58,9 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
 
   return (
     <>
+      {showLoading && <LoadingScreen />}
       <ImgSlideshow />
-      {isPortrait? <HomePagePortrait/> : <HomePageLandscape />}
+      {isPortrait? <HomePagePortrait currentPage={currentPage}/> : <HomePageLandscape currentPage={currentPage} />}
       <Footer />
     </>
   );

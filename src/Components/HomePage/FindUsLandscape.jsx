@@ -1,6 +1,9 @@
-const FindUsLandscape = () => {
+const FindUsLandscape = ({currentPage}) => {
+
+console.log(currentPage)
+
   return (
-    <div className="info-container-find-us">
+    <div className={currentPage === 'home' ? "info-container-find-us" : "info-container-find-us-page"}>
       <div className="coloured-square">
         <div className="map-container">
           <iframe
@@ -21,24 +24,24 @@ const FindUsLandscape = () => {
         <div className="date-time-container">
           <div className="left-column">
             <ul className="opening-times">
-              <li className="day">Monday</li>
-              <li className="day">Tuesday</li>
-              <li className="day">Wednesday</li>
-              <li className="day">Thursday</li>
-              <li className="day">Friday</li>
-              <li className="day">Saturday</li>
-              <li className="day">Sunday</li>
+              <li className="day">MONDAY</li>
+              <li className="day">TUESDAY</li>
+              <li className="day">WEDNESDAY</li>
+              <li className="day">THURSDAY</li>
+              <li className="day">FRIDAY</li>
+              <li className="day">SATURDAY</li>
+              <li className="day">SUNDAY</li>
             </ul>
           </div>
           <div className="right-column">
             <ul className="opening-times">
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
             </ul>
           </div>
         </div>

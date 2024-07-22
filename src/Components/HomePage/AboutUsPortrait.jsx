@@ -1,25 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext, useState } from "react";
+import "../../../CSS/AboutUs.css";
+import CurrentPageContext from "../../Context/CurrentPageContext";
 
 const AboutUsPortrait = () => {
   const containersRef = useRef([]);
-
-  useEffect(() => {
-    const backgroundContainer = document.createElement("div");
-    backgroundContainer.classList.add("about-us-background");
-    backgroundContainer.style.height = "100vh";
-    backgroundContainer.style.width = "100vw";
-    backgroundContainer.style.marginTop = "8vh";
-    backgroundContainer.style.position = "fixed";
-    backgroundContainer.style.top = 0;
-    backgroundContainer.style.left = 0;
-    backgroundContainer.style.zIndex = -1;
-
-    document.body.appendChild(backgroundContainer);
-
-    return () => {
-      document.body.removeChild(backgroundContainer);
-    };
-  }, []);
+  const { currentPage } = useContext(CurrentPageContext);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,7 +31,7 @@ const AboutUsPortrait = () => {
 
   return (
     <>
-      <div className="about-us-section">
+      <div className={currentPage === "home" ? "about-us-container" : "about-us-section-2"}>
         <div
           className="about-us-text-container"
           ref={(el) => {

@@ -3,7 +3,7 @@ import FindUsLandscape from "./FindUsLandscape"
 import ContactUs from "./ContactUs";
 import "../../../CSS/FindUs.css"
 
-const HomePageLandscape = () => {
+const HomePageLandscape = ({currentPage}) => {
   return (
     <>
     <div className="home-page-container">
@@ -32,8 +32,8 @@ const HomePageLandscape = () => {
       </section>
     </div>
         <AboutUs />
-        <ContactUs/>
-        <FindUsLandscape/>
+        <ContactUs currentPage={currentPage}/>
+        <FindUsLandscape currentPage={currentPage}/>
     </>
   );
 };

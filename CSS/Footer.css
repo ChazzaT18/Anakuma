@@ -8,8 +8,8 @@
   }
 @media (orientation: landscape) {
   .footer-container {
-    border-top: 1vh solid #b8a585;
-    border-bottom: 1vh solid #b8a585;
+    border-top: 0.75vh solid #b8a585;
+    border-bottom: 0.75vh solid #b8a585;
     background-color: rgb(10, 10, 10);
     height: 75vh;
     width: 100%;
@@ -126,8 +126,8 @@
 }
 @media (max-width: 650px) and (orientation: portrait) {
   .footer-container-mobile {
-    border-top: 1vh solid #b8a585;
-    border-bottom: 1vh solid #b8a585;
+    border-top: 0.75vh solid #b8a585;
+    border-bottom: 0.75vh solid #b8a585;
     background-color: rgb(10, 10, 10);
     height: 70vh;
     width: 100%;

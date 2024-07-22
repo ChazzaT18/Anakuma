@@ -88,7 +88,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
                 rel="noopener noreferrer"
                 fgColor={"white"}
                 bgColor={"#384129"}
-                style={{ height: "5.25vh", width: "5.25vh" }}
+                style={{ height: "5vh", width: "5vh" }}
               />
             </div>
             <Link
@@ -110,7 +110,7 @@ const LandscapeHeader = ({ setCurrentPage, currentPage }) => {
                 rel="noopener noreferrer"
                 fgColor={"white"}
                 bgColor={"#384129"}
-                style={{ height: "5.25vh", width: "5.25vh" }}
+                style={{ height: "5vh", width: "5vh" }}
               />
             </div>
             <BookingWidget />

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import FindUsPortrait from "./FindUsPortrait";
 import "../../../CSS/AboutUs.css";
 
-const HomePagePortrait = () => {
+const HomePagePortrait = ({currentPage}) => {
   return (
     <>
       <div className="home-page-container">
@@ -31,12 +31,8 @@ const HomePagePortrait = () => {
             </div>
           </div>
           <AboutUsPortrait />
-          <ContactUs />
+          <ContactUs currentPage={currentPage}/>
           <FindUsPortrait />
-          <Link className={"menu-link"} to="/menu"
-          >
-            VIEW OUR FULL MENU
-          </Link>
         </section>
       </div>
     </>

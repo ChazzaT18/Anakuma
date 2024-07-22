@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FindUsPortrait = () => {
   return (
     <div className="info-container-find-us">
@@ -24,24 +26,24 @@ const FindUsPortrait = () => {
         <div className="date-time-container">
           <div className="left-column">
             <ul className="opening-times">
-              <li className="day">Monday</li>
-              <li className="day">Tuesday</li>
-              <li className="day">Wednesday</li>
-              <li className="day">Thursday</li>
-              <li className="day">Friday</li>
-              <li className="day">Saturday</li>
-              <li className="day">Sunday</li>
+              <li className="day">MONDAY</li>
+              <li className="day">TUESDAY</li>
+              <li className="day">WEDNESDAY</li>
+              <li className="day">THURSDAY</li>
+              <li className="day">FRIDAY</li>
+              <li className="day">SATURDAY</li>
+              <li className="day">SUNDAY</li>
             </ul>
           </div>
           <div className="right-column">
             <ul className="opening-times">
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 10:00 pm</li>
-              <li className="day">12:00 – 09:00 pm</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 10:00 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
             </ul>
           </div>
         </div>
@@ -67,6 +69,10 @@ const FindUsPortrait = () => {
           </div>
         </div>
       </div>
+      <Link className={"menu-link"} style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)'}} to="/menu"
+          >
+            VIEW OUR FULL MENU
+          </Link>
     </div>
   );
 };
