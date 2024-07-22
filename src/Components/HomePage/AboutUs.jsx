@@ -113,7 +113,7 @@ const AboutUs = () => {
               Join us at Anakuma to experience our warm hospitality and the
               vibrant flavors of our kitchen. Whether you're a local resident or
               visiting Brighton, we look forward to welcoming you to our table
-              where every dish tells a story of passion and creativity. And if
+              where every dish tells a story of passion and creativity. If
               you're in the mood for a different culinary adventure, don't
               forget to visit our sister restaurant, Halisco, just down the
               street. There, you can immerse yourself in the bold and savory

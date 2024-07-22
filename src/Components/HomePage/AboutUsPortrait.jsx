@@ -99,7 +99,7 @@ const AboutUsPortrait = () => {
           }}
         >
           <p className="about-us-text">
-          Join us at Anakuma to experience our warm hospitality and the vibrant flavors of our kitchen. Whether you're a local resident or visiting Brighton, we look forward to welcoming you to our table where every dish tells a story of passion and creativity. And if you're in the mood for a different culinary adventure, don't forget to visit our sister restaurant, Halisco, just down the street. There, you can immerse yourself in the bold and savory flavors of Mexico, crafted with the same dedication to quality and taste that defines our approach at Anakuma. Whichever you choose, we promise an unforgettable dining experience that reflects our commitment to exceptional food and genuine hospitality.
+          Join us at Anakuma to experience our warm hospitality and the vibrant flavors of our kitchen. Whether you're a local resident or visiting Brighton, we look forward to welcoming you to our table where every dish tells a story of passion and creativity. If you're in the mood for a different culinary adventure, don't forget to visit our sister restaurant, Halisco, just down the street. There, you can immerse yourself in the bold and savory flavors of Mexico, crafted with the same dedication to quality and taste that defines our approach at Anakuma. Whichever you choose, we promise an unforgettable dining experience that reflects our commitment to exceptional food and genuine hospitality.
           </p>
         </div>
         <div
