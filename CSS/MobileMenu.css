@@ -22,10 +22,9 @@
 }
 
 .mobile-menu {
-    height: 82vh;
+    height: 100vh;
     width: 100%;
     position: fixed;
-    padding-top: 8vh;
     top: 0;
     z-index: 998;
     background-color: #28412d;
@@ -51,17 +50,20 @@
     display: flex;
     font-family: 'ChineseRocks';
     letter-spacing: 0.1vw;
-    font-size: 3vh;
+    font-size: 3.25vh;
     flex-direction: column;
     justify-content: space-around;
     text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
     1.5px 1.5px 0 #000;
     align-items: center;
-    height: 60%;
-    margin-bottom: 10vh;
+    height: 55%;
+    margin-bottom: 3vh;
     width: 100%;
 }
 
 .mobile-menu-item {
     height: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }

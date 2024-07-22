@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LoadingScreen from "../Components/LoadingScreen";
+import useImagesLoaded from "../Components/useImagesLoaded";
 import AboutUs from "../Components/HomePage/AboutUs";
 import Footer from "../Components/Footer/Footer";
 import FooterPortrait from "../Components/Footer/FooterPortrait";
@@ -53,9 +54,15 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
     };
   }, [currentPage]);
 
+  const imagesLoaded = useImagesLoaded([
+    "/Images/restaurant-landscape.jpg",
+    "/Images/background.jpg"
+  ]);
+
   return (
     <>
-      {showLoading && <LoadingScreen />}
+      {(showLoading || (isPortrait && !imagesLoaded)) && <LoadingScreen />}
+      {isPortrait? <img className="anakuma-outside" src="/Images/restaurant-landscape.jpg" alt="Anakuma inside" /> : null}
       {isPortrait ? <AboutUsPortrait /> : <AboutUs />}
       {isPortrait? <FooterPortrait /> : <Footer />}
     </>

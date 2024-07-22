@@ -267,13 +267,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 11vh;
+    padding-top: 5vh;
     padding-bottom: 2vh;
     justify-content: center;
     align-items: center;
     height: auto;
     background: url("/Images/taco-black-and-white.jpg") center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
   }
   .about-us-text-container {
     width: 100%;
@@ -400,6 +399,10 @@
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 2; /* This image will be below the other one */
   }
+  .anakuma-outside{
+    padding-top: 8vh;
+    width: 100%;
+  }
 }
 @media (orientation:portrait) and (max-width: 720px) {
   .about-us-container {
@@ -437,13 +440,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 11vh;
+    padding-top: 5vh;
     padding-bottom: 2vh;
     justify-content: center;
     align-items: center;
     height: auto;
     background: url("/Images/taco-black-and-white.jpg") center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
   }
   .about-us-text-container {
     width: 100%;
@@ -569,6 +571,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 2; /* This image will be below the other one */
+  }
+  .anakuma-outside{
+    padding-top: 8vh;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
   }
 }
 

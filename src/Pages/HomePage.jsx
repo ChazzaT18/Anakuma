@@ -4,15 +4,19 @@ import HomePageLandscape from "../Components/HomePage/HomePageLandscape";
 import Footer from "../Components/Footer/Footer";
 import LoadingScreen from "../Components/LoadingScreen";
 import HomePagePortrait from "../Components/HomePage/HomePagePortrait";
+import useImagesLoaded from "../Components/useImagesLoaded";
 import "../../CSS/HomePage.css";
 
 const HomePage = ({ setCurrentPage, currentPage }) => {
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isPortrait, setIsPortrait] = useState(window.innerWidth < window.innerHeight);
   const [showLoading, setShowLoading] = useState(true);
-  const [isPortrait, setIsPortrait] = useState(
-    window.innerWidth < window.innerHeight
-  );
+
+  // Define image URLs
+  const backgroundImage = "/Images/background.jpg";
+
+  // Use the hook to check if the image is loaded
+  const imagesLoaded = useImagesLoaded([backgroundImage]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,11 +29,10 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); 
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
-      window.scrollTo(0, 0);
       setShowLoading(false);
     }, 1250);
     setCurrentPage("home");
@@ -37,13 +40,13 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
 
     const backgroundContainer = document.createElement("div");
     backgroundContainer.classList.add("about-us-background");
-    backgroundContainer.style.backgroundImage = "url(/Images/background.jpg)";
+    backgroundContainer.style.backgroundImage = `url(${backgroundImage})`;
     backgroundContainer.style.backgroundPosition = "center";
     backgroundContainer.style.backgroundRepeat = "no-repeat";
     backgroundContainer.style.backgroundSize = "cover";
     backgroundContainer.style.height = "110vh";
     backgroundContainer.style.width = "100%";
-    backgroundContainer.style.paddingLeft = "8vw"
+    backgroundContainer.style.paddingLeft = "8vw";
     backgroundContainer.style.position = "fixed";
     backgroundContainer.style.top = 0;
     backgroundContainer.style.left = 0;
@@ -56,11 +59,14 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
     };
   }, [currentPage]);
 
+  if (!imagesLoaded) {
+    return <LoadingScreen />;
+  }
+
   return (
     <>
-      {showLoading && <LoadingScreen />}
       <ImgSlideshow />
-      {isPortrait? <HomePagePortrait currentPage={currentPage}/> : <HomePageLandscape currentPage={currentPage} />}
+      {isPortrait ? <HomePagePortrait currentPage={currentPage} /> : <HomePageLandscape currentPage={currentPage} />}
       <Footer />
     </>
   );

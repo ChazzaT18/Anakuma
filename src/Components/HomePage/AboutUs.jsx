@@ -7,6 +7,7 @@ const AboutUs = () => {
   const containersRef = useRef([]);
   const { currentPage } = useContext(CurrentPageContext); 
 
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

@@ -16,7 +16,7 @@ const ContactUsPage = ({ setCurrentPage, currentPage }) => {
     setTimeout(() => {
       window.scrollTo(0, 0);
       setShowLoading(false);
-    }, 1250);
+    }, 1000);
     setCurrentPage("contact-us");
     window.scrollTo(0, 0);
   }, [currentPage]);

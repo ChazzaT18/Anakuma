@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import CurrentPageContext from "../../Context/CurrentPageContext";
@@ -6,9 +6,30 @@ import "../../../CSS/MobileMenu.css";
 
 const MobileMenu = ({ MobileMenuVisible }) => {
   const { currentPage } = useContext(CurrentPageContext);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const handleResize = () => {
+    setWindowHeight(window.innerHeight);
+  };
+
+  useEffect(() => {
+    // Initial adjustment
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div className={`mobile-menu ${MobileMenuVisible ? "visible" : "hidden"}`}>
+    <div
+      className={`mobile-menu ${MobileMenuVisible ? "visible" : "hidden"}`}
+      style={{ height: `${windowHeight}px` }}
+    >
       <div className="mobile-menu-container">
         <Link
           to="/"
@@ -17,11 +38,11 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             currentPage === "home"
               ? {
                   textDecoration: "underline",
-                  color: "rgb(236, 223, 207)",
+                  color: "white",
                   textShadow:
                     "-1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000",
                 }
-              : { textDecoration: "none", color: "rgb(236, 223, 207)" }
+              : { textDecoration: "none", color: "white" }
           }
         >
           HOME
@@ -33,10 +54,10 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             currentPage === "menu"
               ? {
                   textDecoration: "underline",
-                  color: "rgb(236, 223, 207)",
+                  color: "white",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
                 }
-              : { textDecoration: "none", color: "rgb(236, 223, 207)" }
+              : { textDecoration: "none", color: "white" }
           }
         >
           MENU
@@ -48,10 +69,10 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             currentPage === "contact-us"
               ? {
                   textDecoration: "underline",
-                  color: "rgb(236, 223, 207)",
+                  color: "white",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
                 }
-              : { textDecoration: "none", color: "rgb(236, 223, 207)" }
+              : { textDecoration: "none", color: "white" }
           }
         >
           GET IN TOUCH
@@ -63,10 +84,10 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             currentPage === "about-us"
               ? {
                   textDecoration: "underline",
-                  color: "rgb(236, 223, 207)",
+                  color: "white",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
                 }
-              : { textDecoration: "none", color: "rgb(236, 223, 207)" }
+              : { textDecoration: "none", color: "white" }
           }
         >
           ABOUT US
@@ -78,10 +99,10 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             currentPage === "find-us"
               ? {
                   textDecoration: "underline",
-                  color: "rgb(236, 223, 207)",
+                  color: "white",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 1)",
                 }
-              : { textDecoration: "none", color: "rgb(236, 223, 207)" }
+              : { textDecoration: "none", color: "white" }
           }
         >
           FIND US
@@ -90,7 +111,7 @@ const MobileMenu = ({ MobileMenuVisible }) => {
           <a
             style={{
               textDecoration: "none",
-              color: "rgb(236, 223, 207)",
+              color: "white",
               marginLeft: "5vw",
             }}
             href="https://www.instagram.com/anakumabrighton/"
@@ -104,7 +125,7 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             url="https://www.instagram.com/anakumabrighton/"
             target="_blank"
             rel="noopener noreferrer"
-            fgColor={"rgb(236, 223, 207)"}
+            fgColor={"white"}
             bgColor={"#28412d"}
             style={{ height: "4vh", width: "4vh" }}
           />
@@ -113,7 +134,7 @@ const MobileMenu = ({ MobileMenuVisible }) => {
           <a
             style={{
               textDecoration: "none",
-              color: "rgb(236, 223, 207)",
+              color: "white",
               marginLeft: "5vw",
             }}
             href="https://www.facebook.com/profile.php?id=61552572519429"
@@ -127,7 +148,7 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             url="https://www.facebook.com/profile.php?id=61552572519429"
             target="_blank"
             rel="noopener noreferrer"
-            fgColor={"rgb(236, 223, 207)"}
+            fgColor={"white"}
             bgColor={"#28412d"}
             style={{ height: "4vh", width: "4vh" }}
           />

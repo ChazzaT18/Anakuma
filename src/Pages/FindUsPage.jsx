@@ -13,7 +13,7 @@ const FindUsPage = ({ setCurrentPage, currentPage }) => {
     setTimeout(() => {
       window.scrollTo(0, 0);
       setShowLoading(false); 
-    }, 1250); 
+    }, 1000); 
 
     setCurrentPage("find-us");
     window.scrollTo(0, 0);

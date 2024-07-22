@@ -1,13 +1,40 @@
 import DishCard from "./DishCard";
+import DrinkCard from "./DrinkCard";
+import LoadingScreen from "../LoadingScreen";
+import useImagesLoaded from "../useImagesLoaded";
 import { useEffect, useState, useRef } from "react";
 
-const MenuLandscape = ({ snacksMenu, smallPlatesMenu, baoMenu }) => {
+const MenuLandscape = ({
+  snacksMenu,
+  smallPlatesMenu,
+  baoMenu,
+  cocktailsMenu,
+  beerMenu,
+  spiritsMenu,
+  kampaiMenu,
+  softDrinksMenu
+}) => {
   const navRef = useRef(null);
   const [isPortrait, setIsPortrait] = useState(
     window.innerHeight > window.innerWidth
   );
   const [currentSection, setCurrentSection] = useState(null);
   const [headerHeight, setHeaderHeight] = useState(0);
+
+  const imageUrls = [
+    "/Images/MenuPage/shrimp-nuggets.jpg",
+    "/Images/MenuPage/dessert.jpg",
+    "/Images/MenuPage/cocktail-1.jpg",
+    "/Images/MenuPage/tuna.jpg",
+    "/Images/MenuPage/wines.jpg",
+    "/Images/MenuPage/seabass.jpg",
+    "/Images/MenuPage/mixed-foods.jpg",
+    "/Images/MenuPage/cocktail-2.jpg",
+    "/Images/MenuPage/beer-bao.jpg",
+    "/Images/MenuPage/bao-bun-3.jpg",
+  ];
+
+  const imagesLoaded = useImagesLoaded(imageUrls);
 
   useEffect(() => {
     const handleResize = () => {
@@ -101,6 +128,10 @@ const MenuLandscape = ({ snacksMenu, smallPlatesMenu, baoMenu }) => {
       });
     }
   };
+
+  if (!imagesLoaded) {
+    return <LoadingScreen />
+  }
 
   return (
     <>
@@ -232,6 +263,66 @@ const MenuLandscape = ({ snacksMenu, smallPlatesMenu, baoMenu }) => {
             BAO BUNS
           </p>
         </div>
+        <div className="menu-nav-category-container">
+          <p
+            onClick={() => scrollToSection("cocktails-container")}
+            className={
+              currentSection === "cocktails-container"
+                ? "nav-category active"
+                : "nav-category"
+            }
+          >
+            COCKTAILS
+          </p>
+        </div>
+        <div className="menu-nav-category-container">
+          <p
+            onClick={() => scrollToSection("beer-container")}
+            className={
+              currentSection === "beer-container"
+                ? "nav-category active"
+                : "nav-category"
+            }
+          >
+            BEER
+          </p>
+        </div>
+        <div className="menu-nav-category-container">
+          <p
+            onClick={() => scrollToSection("spirits-container")}
+            className={
+              currentSection === "spirits-container"
+                ? "nav-category active"
+                : "nav-category"
+            }
+          >
+            SPIRITS
+          </p>
+        </div>
+        <div className="menu-nav-category-container">
+          <p
+            onClick={() => scrollToSection("kampai-container")}
+            className={
+              currentSection === "kampai-container"
+                ? "nav-category active"
+                : "nav-category"
+            }
+          >
+            KAMPAI
+          </p>
+        </div>
+        <div className="menu-nav-category-container">
+          <p
+            onClick={() => scrollToSection("soft-drinks-container")}
+            className={
+              currentSection === "soft-drinks-container"
+                ? "nav-category active"
+                : "nav-category"
+            }
+          >
+            SOFT DRINKS
+          </p>
+        </div>
       </div>
       <div className="nav-replacement"></div>
       <div className="menu-cards-container">
@@ -256,6 +347,46 @@ const MenuLandscape = ({ snacksMenu, smallPlatesMenu, baoMenu }) => {
           <ul>
             {baoMenu.map((dish, index) => (
               <DishCard key={index} dish={dish} />
+            ))}
+          </ul>
+        </section>
+        <section className="menu-item-container" id="cocktails-container">
+          <h1 className="category">COCKTAILS</h1>
+          <ul>
+            {cocktailsMenu.map((drink, index) => (
+              <DrinkCard key={index} drink={drink} />
+            ))}
+          </ul>
+        </section>
+        <section className="menu-item-container" id="beer-container">
+          <h1 className="category">BEER</h1>
+          <ul>
+            {beerMenu.map((drink, index) => (
+              <DrinkCard key={index} drink={drink} />
+            ))}
+          </ul>
+        </section>
+        <section className="menu-item-container" id="spirits-container">
+          <h1 className="category">SPIRITS</h1>
+          <ul>
+            {spiritsMenu.map((drink, index) => (
+              <DrinkCard key={index} drink={drink} />
+            ))}
+          </ul>
+        </section>
+        <section className="menu-item-container" id="kampai-container">
+          <h1 className="category">KAMPAI</h1>
+          <ul>
+            {kampaiMenu.map((drink, index) => (
+              <DrinkCard key={index} drink={drink} />
+            ))}
+          </ul>
+        </section>
+        <section className="menu-item-container" id="soft-drinks-container">
+          <h1 className="category">SOFT DRINKS</h1>
+          <ul>
+            {kampaiMenu.map((drink, index) => (
+              <DrinkCard key={index} drink={drink} />
             ))}
           </ul>
         </section>
