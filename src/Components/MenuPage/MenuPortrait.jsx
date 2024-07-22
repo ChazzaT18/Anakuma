@@ -169,6 +169,7 @@ const MenuPortrait = ({
             <p>VEGAN</p>
           </div>
           <div className="dietary-ting" style={{ marginLeft: "5vw" }}>
+            
             <span className="dietary-signs">{veganOptionSymbol}</span>
             <p style={{ margin: "1.5vw" }}>=</p>
             <p>VEGAN OPTION</p>
