@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "ChineseRocks";
+  src: url("../src/fonts/chinese\ rocks\ rg.otf") format("opentype");
+}
+@media (orientation: landscape) {
+  .contact-us-page-section {
+    display: flex;
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: 110vh;
+    background-image: url("/Images/restaurant-landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    z-index: 5;
+    justify-content: center;
+    border-top: 0.75vh solid #b8a585;
+    border-bottom: 0.75vh solid #b8a585;
+    align-items: center;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))
+      drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8));
+  }
+  .contact-us-page-section-2 {
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    background-image: url("/Images/restaurant-landscape.jpg");
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    z-index: 5;
+    justify-content: center;
+    border-top: 0.75vh solid #b8a585;
+    align-items: center;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    padding-top: 2vh;
+    height: 80%;
+    width: 45%;
+    background-color: #000000d2;
+    padding-bottom: 4vh;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .inputs {
+    margin: 2vh;
+    height: 8%;
+    border-radius: 5px;
+    width: 70%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+  }
+
+  .message {
+    margin: 2vh;
+    margin-bottom: 5vh;
+    height: 45%;
+    border-radius: 5px;
+    width: 70%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    resize: none;
+  }
+
+  .submit-button {
+    width: 20%;
+    height: 70%;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: "ChineseRocks";
+    font-size: 2.75vh;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 7vh;
+    color: #ffffff;
+    font-family: "ChineseRocks";
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+      3px 3px 0 #000;
+  }
+
+  .title-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 1vh;
+    height: 15%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #888;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .contact-us-page-section {
+    display: flex;
+    width: calc(100% - 1.5vh);
+    height: 100vh;
+    border: 0.75vh solid #b8a585;
+    flex-direction: column;
+    justify-content: center;
+    /* filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8)); */
+    align-items: center;
+    background-image: url("/Images/bao-bun-2.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+  .contact-us-page-section-2 {
+    display: flex;
+    width: calc(100% - 1.5vh);
+    height: 100vh;
+    border-top: 0.75vh solid #b8a585;
+    border-right: 0.75vh solid #b8a585;
+    border-left: 0.75vh solid #b8a585;
+    flex-direction: column;
+    justify-content: center;
+    /* filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 4px 10px rgba(0, 0, 0, 0.8)); */
+    align-items: center;
+    background-image: url("/Images/bao-bun-2.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .inputs {
+    margin: 2vh;
+    height: 8%;
+    border-radius: 5px;
+    width: 75%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+  }
+
+  .message {
+    margin: 2vh;
+    margin-bottom: 5vh;
+    height: 45%;
+    border-radius: 5px;
+    width: 75%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    resize: none;
+  }
+
+  .submit-button {
+    width: 30%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: white;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: "ChineseRocks";
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    color: rgb(0, 0, 0);
+  }
+
+  h2 {
+    font-size: 5vh;
+    color: rgb(255, 255, 255);
+    font-family: "ChineseRocks";
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+      3px 3px 0 #000;
+  }
+
+  .title-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 15%;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .footer-container {
+    background-color: rgb(72, 31, 31);
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15vh;
+  }
+}

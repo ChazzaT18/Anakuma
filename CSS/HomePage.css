@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Hachimaki-EawZ8";
+  src: url("../src/fonts/Hachimaki-EawZ8.otf") format("opentype");
+}
+
+@media (orientation: landscape){
+    .home-page-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+      }
+      
+      .image-gallery-container {
+        width: 100%;
+        height: 100vh; 
+        overflow: hidden;
+      }
+      
+      .image-gallery-slide {
+        width: 100vw; 
+        height: 100vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+      }
+      
+      .full-screen-image {
+        width: 100%;
+        height: 100%;
+        transition: transform 5s ease; /* Example transition effect */
+        object-fit: cover; /* Ensure the image covers the container */
+      }
+      .welcome-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+      }
+      .anakuma-welcome{
+        border-bottom: 1vh solid black;
+        border-top: 1vh solid black;
+        width: 100%;
+        height: 17.5vh;
+        background-image: url("/Images/proto.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        filter: drop-shadow(0 20px 80px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+      }
+      .anakuma-title{
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .badger-container{
+        height: 100%;
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .badger-logo{
+        height: 60%;
+      }
+      .tester{
+        height: 200vh;
+      }
+}
+@media (orientation: portrait) {
+    .home-page-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+      }
+      
+      .image-gallery-container {
+        width: 100%;
+        height: 84vh; 
+        overflow: hidden;
+      }
+      
+      .image-gallery-slide {
+        width: 100vw; 
+        height: 84vh; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+      }
+      
+      .full-screen-image {
+        width: 100%;
+        height: 100%;
+        transition: transform 5s ease; /* Example transition effect */
+        object-fit: cover; /* Ensure the image covers the container */
+      }
+      .welcome-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+      }
+      .anakuma-welcome{
+        width: 100%;
+        height: 11.5vh;
+        background-image: url("/Images/prototype-portrait.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+      }
+      .anakuma-title{
+        height: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .badger-container{
+        height: 100%;
+        width: 22.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .badger-logo{
+        height: 35%;
+      }
+      .menu-link{
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "ChineseRocks";
+        color: white;
+        font-size: 4vh;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+        2px 2px 0 #000;
+      }
+}

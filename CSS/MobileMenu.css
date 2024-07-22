@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "ChineseRocks";
+    src: url("../src/fonts/chinese rocks rg.otf") format("opentype");
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.mobile-menu {
+    height: 82vh;
+    width: 100%;
+    position: fixed;
+    padding-top: 8vh;
+    top: 0;
+    z-index: 998;
+    background-color: #28412d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1;     transition: transform 1s ease-in-out; /* Example transition */
+    transform: translateY(-100%); /* Start position off-screen */
+}
+
+.mobile-menu.visible {
+    transform: translateY(0); /* Slide down animation */
+    pointer-events: auto;
+  }
+  
+  .mobile-menu.hidden {
+    pointer-events: none;
+    transform: translateY(-100%); /* Slide up animation */
+  }
+
+.mobile-menu-container {
+    display: flex;
+    font-family: 'ChineseRocks';
+    letter-spacing: 0.1vw;
+    font-size: 3vh;
+    flex-direction: column;
+    justify-content: space-around;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+    align-items: center;
+    height: 60%;
+    margin-bottom: 10vh;
+    width: 100%;
+}
+
+.mobile-menu-item {
+    height: auto;
+}
