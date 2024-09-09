@@ -62,8 +62,39 @@
 }
 
 .mobile-menu-item {
-    height: auto;
+    height: 5vh;
     color: white;
     justify-content: center;
     align-items: center;
+}
+.halisco-wrapper-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .halisco-menu-logo-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+  }
+  .halisco-menu-title{
+    font-family: "ElSancho";
+    font-style: normal;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 3.75vh;
+    margin-left: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+  }
+.halisco-wrapper-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

@@ -13,13 +13,8 @@ const MobileMenu = ({ MobileMenuVisible }) => {
   };
 
   useEffect(() => {
-    // Initial adjustment
     handleResize();
-
-    // Add event listener for resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -153,6 +148,20 @@ const MobileMenu = ({ MobileMenuVisible }) => {
             style={{ height: "4vh", width: "4vh" }}
           />
         </div>
+        <a
+        style={{textDecoration: 'none'}}
+        className="mobile-menu-item"
+        target="_blank"
+        href="https://www.halisco-brighton.co.uk/"
+      >
+        <div className="halisco-wrapper-menu-mobile">
+          <h1 className="halisco-menu-title">HALISCO</h1>
+          <img
+            src="/Images/halisco-skull-logo.png"
+            className="halisco-menu-logo-mobile"
+          />
+        </div>
+      </a>
       </div>
     </div>
   );
