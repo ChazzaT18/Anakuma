@@ -42,13 +42,13 @@ const FindUsPortrait = () => {
           </div>
           <div className="right-column">
             <ul className="opening-times">
-              <li className="day">12:00 – 10:00 PM</li>
-              <li className="day">12:00 – 09:00 PM</li>
-              <li className="day">12:00 – 09:00 PM</li>
-              <li className="day">12:00 – 09:00 PM</li>
-              <li className="day">12:00 – 10:00 PM</li>
-              <li className="day">12:00 – 10:00 PM</li>
-              <li className="day">12:00 – 09:00 PM</li>
+              <li className="day">Closed</li>
+              <li className="day">12:00 – 08:30 PM</li>
+              <li className="day">12:00 – 08:30 PM</li>
+              <li className="day">12:00 – 08:30 PM</li>
+              <li className="day">12:00 – 08:30 PM</li>
+              <li className="day">12:00 – 08:30 PM</li>
+              <li className="day">12:00 – 08:30 PM</li>
             </ul>
           </div>
         </div>

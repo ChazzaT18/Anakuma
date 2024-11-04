@@ -13,7 +13,7 @@ const ContactUs = ({ currentPage }) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_7zhl7xx", "template_9v52qxn", form.current, {
+      .sendForm("service_7zhl7xx", "template_9nejknj", form.current, {
         publicKey: "OobsCWfPnw4ozeapk",
       })
       .then(
@@ -62,7 +62,7 @@ const ContactUs = ({ currentPage }) => {
               className="inputs"
               type="email"
               placeholder="Email"
-              name="user_email"
+              name="email"
               required
             ></input>
             <input
