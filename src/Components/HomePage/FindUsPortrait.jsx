@@ -43,7 +43,7 @@ const FindUsPortrait = () => {
           <div className="right-column">
             <ul className="opening-times">
               <li className="day">Closed</li>
-              <li className="day">12:00 – 09:0 PM</li>
+              <li className="day">12:00 – 09:00 PM</li>
               <li className="day">12:00 – 09:00 PM</li>
               <li className="day">12:00 – 09:00 PM</li>
               <li className="day">12:00 – 09:30 PM</li>
