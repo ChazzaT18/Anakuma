@@ -69,7 +69,7 @@ const ContactUs = ({ currentPage }) => {
               className="inputs"
               type="text"
               placeholder="Subject"
-              name="subject"
+              name="user_subject"
               required
             ></input>
             <textarea
