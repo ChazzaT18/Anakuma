@@ -67,9 +67,9 @@ const ContactUs = ({ currentPage }) => {
             ></input>
             <input
               className="inputs"
-              type="text"
-              placeholder="Subject"
-              name="user_subject"
+              type="number"
+              placeholder="Contact Number"
+              name="number"
               required
             ></input>
             <textarea
