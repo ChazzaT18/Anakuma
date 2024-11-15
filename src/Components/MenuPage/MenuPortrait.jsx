@@ -195,13 +195,23 @@ const MenuPortrait = ({
         <div className="dietary-info">
           <div className="dietary-ting">
             <span className="dietary-signs">{veganSymbol}</span>
-            <p style={{ margin: "1.5vw" }}>=</p>
+            <p style={{ margin: "1vw" }}>=</p>
             <p>VEGAN</p>
           </div>
-          <div className="dietary-ting" style={{ marginLeft: "5vw" }}>
+          <div className="dietary-ting" style={{ marginLeft: "1vw" }}>
             <span className="dietary-signs">{veganOptionSymbol}</span>
-            <p style={{ margin: "1.5vw" }}>=</p>
+            <p style={{ margin: "1vw" }}>=</p>
             <p>VEGAN OPTION</p>
+          </div>
+          <div className="dietary-ting">
+            <span className="dietary-signs">{vegetarianSymbol}</span>
+            <p style={{ margin: "1vw" }}>=</p>
+            <p>VEGETARIAN</p>
+          </div>
+          <div className="dietary-ting" style={{ marginLeft: "1vw" }}>
+            <span className="dietary-signs">{glutenFreeSymbol}</span>
+            <p style={{ margin: "1vw" }}>=</p>
+            <p>GLUTEN FREE</p>
           </div>
           {/* <div className="dietary-ting">
             <span className="dietary-signs">{vegetarianSymbol}</span>

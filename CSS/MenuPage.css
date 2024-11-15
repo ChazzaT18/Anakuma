@@ -275,8 +275,8 @@
   .gluten-free-symbol,
   .vegetarian-symbol,
   .vegan-option-symbol {
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 2vh;
+    height: 2vh;
     margin: 0.5vw;
   }
   .category-container {
@@ -318,7 +318,7 @@
     background-color: white;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2.25vw;
     color: rgb(88, 31, 31);
   }
   .menu-nav {
@@ -343,6 +343,7 @@
     display: flex;
     color: #000;
     flex-direction: row;
+    margin-right: 2vw;
   }
   .menu-nav-items {
     display: flex;
